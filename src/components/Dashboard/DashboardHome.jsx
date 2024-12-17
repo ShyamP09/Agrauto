@@ -43,17 +43,14 @@ const DashboardHome = () => {
   }, []);
 
   const sections = [
-    { title: "Upload Image", icon: <FaUpload /> },
-    { title: "Current Weather", icon: <FaCloudSun /> },
-    { title: "Soil Status", icon: <FaLeaf /> },
-    { title: "Live Camera Status", icon: <FaCamera /> },
-    { title: "Plant Growth", icon: <FaSeedling />, path: "/mqttdashboard" }, // Add path for Plant Growth
-    { title: "History", icon: <FaHistory /> },
+    { title: "Upload Image", icon: <FaUpload />, path: "/upload-image" },
+    { title: "Current Weather", icon: <FaCloudSun />, path: "/weather" },
+    { title: "Plant Growth", icon: <FaSeedling />, path: "/mqttdashboard" },
   ];
 
   const handleSectionClick = (path) => {
     if (path) {
-      navigate(path); // Navigate to the specified path
+      navigate(path);
     }
   };
 
@@ -70,8 +67,8 @@ const DashboardHome = () => {
           </p>
           <div className="mt-4 flex justify-center space-x-8">
             <div className="text-green-600 font-semibold">
-              <p>Crop Name: Wheat</p>
-              <p>Plant Cycle: 45 days</p>
+              <p>Crop Name: Tomato</p>
+              <p>Plant Cycle: 90 Days</p>
             </div>
           </div>
         </div>
